@@ -7,6 +7,11 @@ mode  = "0644"
 keys = [
   "/deis/services",
   "/deis/router",
+  "/deis/router/index",
+  "/deis/router/auth/enabled",
+  "/deis/router/auth/host",
+  "/deis/router/auth/port",
+  "/deis/router/auth/path",
   "/deis/domains",
   "/deis/controller",
   "/deis/builder",
