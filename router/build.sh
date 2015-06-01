@@ -10,7 +10,7 @@ if [[ -z $DOCKER_BUILD ]]; then
   exit 1
 fi
 
-export VERSION_NGINX=nginx-1.9.0
+export VERSION_NGINX=tengine-2.1.0
 export VERSION_NAXSI=0d53a64ed856e694fcb4038748c8cf6d5551a603
 
 export BUILD_PATH=/tmp/build
@@ -38,7 +38,7 @@ apk add --update-cache \
   zlib-dev
 
 # grab the source files
-curl -sSL http://nginx.org/download/$VERSION_NGINX.tar.gz -o $BUILD_PATH/$VERSION_NGINX.tar.gz
+curl -sSL http://tengine.taobao.org/download/$VERSION_NGINX.tar.gz -o $BUILD_PATH/$VERSION_NGINX.tar.gz
 curl -sSL https://github.com/nbs-system/naxsi/archive/$VERSION_NAXSI.tar.gz -o $BUILD_PATH/$VERSION_NAXSI.tar.gz
 
 # expand the source files
